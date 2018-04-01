@@ -15,6 +15,15 @@ tensorflow_http_archive(
     git_commit = "bc69c4ceed6544c109be5693eb40ddcf3a4eb95d",
 )
 
+# TensorFlow Lattice http archive.
+load("//tensorflow_serving:lattice_repo.bzl", "tensorflow_lattice_http_archive")
+
+tensorflow_lattice_http_archive(
+    name = "org_tensorflow_lattice",
+    sha256 = "f4d8e7a34730ff8b5f896bb213d7a23945af8ec4a7dbc88124658a48eadb9849",
+    git_commit = "45336f10ee37326e2e719645d4e1eeb8ce01c523",
+)
+
 # TensorFlow depends on "io_bazel_rules_closure" so we need this here.
 # Needs to be kept in sync with the same target in TensorFlow's WORKSPACE file.
 http_archive(
